@@ -10,7 +10,7 @@ I downloaded the challenge files and moved the executable into my Kali Linux VM.
 
 First, I checked what type of executable I was dealing with:
 
-file Tetrix.exe
+`file Tetrix.ex`
 
 This identified it as a 64-bit Windows PE executable.
 
