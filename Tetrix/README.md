@@ -16,11 +16,11 @@ This identified it as a 64-bit Windows PE executable.
 
 I then used strings to extract readable text from the binary:
 
-(`strings Tetrix.exe`)
+`strings Tetrix.exe`
 
 There was a lot of output, so I narrowed the search using grep:
 
-(`strings Tetrix.exe | grep -iE 'flag|thm|secret|cipher|encrypt|decrypt' `)
+`strings Tetrix.exe | grep -iE 'flag|thm|secret|cipher|encrypt|decrypt' `
 
 This revealed the flag directly in the executable.
 
