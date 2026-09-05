@@ -1,50 +1,31 @@
 # TryHackMe — Game Hacking: The Game
 
-## Overview
+## What I Did
 
-Completed the **Game Hacking: The Game** challenge on TryHackMe.
+This challenge involved analyzing a Windows executable (`Tetrix.exe`) to find a hidden flag.
 
-The objective was to analyze a Windows executable and uncover hidden data contained within the game's code.
+I downloaded the challenge files and moved the executable into my Kali Linux VM.
 
-## Skills & Techniques
+## Analysis
 
-- Static analysis
-- Windows PE executable analysis
-- String extraction
-- Command-line analysis
-- Basic reverse engineering
-
-## Tools Used
-
-- Kali Linux
-- `file`
-- `strings`
-- `grep`
-
-## Methodology
-
-### 1. Identify the executable
-
-I first used the `file` command to determine what type of executable I was working with:
+First, I checked what type of executable I was dealing with:
 
 file Tetrix.exe
 
-The output identified Textrix.exe as a 64-bit Windows PE executable
+This identified it as a 64-bit Windows PE executable.
 
-### 2. Extract Readable Strings
+I then used strings to extract readable text from the binary:
 
 strings Tetrix.exe
 
-### 3. Search for Relevant Strings
-
-Rather than manually reviewing all of the extracted strings, I filtered the output for keywords commonly associated with CTF flags and sensitive information:
+There was a lot of output, so I narrowed the search using grep:
 
 strings Tetrix.exe | grep -iE 'flag|thm|secret|cipher|encrypt|decrypt'
 
-This search revealed the flag contained within the executable
+This revealed the flag directly in the executable.
 
-### What I learned 
+Tools used: Kali Linux, file, strings, grep
 
-This challenge demonstrated how basic static analysis can reveal useful information from an executable without needing to execute it.
+## My Takeaway
 
-I also learned how file, strings, and grep can be combined to quickly identify an executable's characteristics and search large amounts of extracted data for relevant information.
+This was a good introduction to basic static analysis. I learned that before jumping into more complicated reverse-engineering tools, it's worth checking whether useful information is already exposed through readable strings.
