@@ -6,7 +6,7 @@ The conversation contained an email address and a clue about a profile service. 
 
 ![Leaked Conversation](screenshots/Overheard_at_breakfast_conversation.png)
 
-### The Process
+## The Process
 
 I googled the hint to figure out which service the clue was mentioning
 
