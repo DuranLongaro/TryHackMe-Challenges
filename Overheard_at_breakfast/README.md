@@ -6,11 +6,13 @@ The conversation contained an email address and a clue about a profile service. 
 
 ![Leaked Conversation](screenshots/Overheard_at_breakfast_conversation.png)
 
-I then googled the hint to figure out which service the clue was mentioning
+### The Process
+
+I googled the hint to figure out which service the clue was mentioning
 
 ![Google Search](screenshots/overheard_at_breakfast_google.png)
 
-Upon further investigation of Gravatar, I found out that they use a SHA256 hash of the email to locate the profile. 
+Upon further investigation of Gravatar, I found out that they use a `SHA256 hash` of the email to locate the profile. 
 
 This is when i used `printf '%s' 'lambobytelotushotel@gmail.com' | sha256sum`.
 
@@ -29,3 +31,7 @@ After copying the encoded version I used `echo '<BASE64_STRING>' | base64 -d` to
 ![Terminal](screenshots/overheard_at_breakfast_terminal.png)
 
 Tools used: Kali Linux, Google, Gravatar, sha256sum, curl, base64
+
+### My Takeaway
+
+This challenge taught me that small pieces of information that seem insignificant on their own can become useful when combined with other clues. I learned how OSINT can be used to connect information from a conversation to an online profile, and I also got more familiar with hashing, API requests, and Base64 decoding.
