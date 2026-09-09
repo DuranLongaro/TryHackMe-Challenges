@@ -10,3 +10,5 @@ Through this task I learned why we would use `HTTPS` over `HTTP` and what exactl
 
 I also learned the 'under the hood' aspects of `HTTP` communication and how it actually works
 
+alongside manually prompting an `IP` and a respective port to give information
+
