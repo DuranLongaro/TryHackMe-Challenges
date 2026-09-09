@@ -1,14 +1,11 @@
-### Find The Flag!
+### Telnet & HTTP
 
-Used `telnet` for an unencrypted communication to the `HTTP port 80`
+Used `telnet` to establish an unencrypted connection to the HTTP service running on `port 80`.
 
-In order to find the "flag" I needed to use the `GET` feature and retrieve the contents of `flag.thm`
+I used an HTTP `GET` request to retrieve the contents of `flag.thm.`
 
 ![Terminal](screenshots/Manual_Request.png)
 
-Through this task I learned why we would use `HTTPS` over `HTTP` and what exactly `telnet` can be used for
-
-I also learned the 'under the hood' aspects of `HTTP` communication and how it actually works
-
-alongside manually prompting an `IP` and a respective port to give information
+I learned why HTTPS is preferred over HTTP and what Telnet can be used for. 
+I also gained a better understanding of how HTTP communication works under the hood, including how a client can manually send a request to an IP address and port.
 
