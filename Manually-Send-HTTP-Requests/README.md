@@ -1,4 +1,4 @@
-### Manually sent an HTTP request
+### Find The Flag!
 
 Used `telnet` for an unencrypted communication to the `HTTP port 80`
 
